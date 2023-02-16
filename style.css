@@ -3,6 +3,7 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    transition: .1s;
 }
 
 :root{
@@ -23,6 +24,24 @@
     --primary-color:white;
     --input-bg:#0e0e0e;
 }
+/* 
+@media (prefers-color-scheme: dark) {
+    
+:root{
+    --primary-bg: rgb(10, 9, 9);
+    --secondary-bg: #0e0e0e;
+    --button-color:#ffffff;
+    --button-bg: #596D48;
+    --input-border:1px solid #747475;
+    --primary-color:white;
+    --input-bg:#0e0e0e;
+    
+}
+.mode{
+    display: none;
+}
+} */
+
 
 body{
     display: grid;
@@ -35,6 +54,12 @@ body{
     background: url('bg.jpg') no-repeat center center/cover;
 }
 
+.mode{
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right:20px;
+    }
 fieldset{
     border: none;
 }
@@ -65,24 +90,6 @@ form{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-.moon{
-    width: 30px;
-    right: 20px;
-    top:20px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.sun{
-    width: 40px;
-    right: 20px;
-    top:20px;
-    display:none;
-    position: absolute;
-    cursor: pointer;
-    color:white;
 }
 
 input{
@@ -147,3 +154,56 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .3s cubic-bezier(0,2.18,.64,.69);
+  }
+  
+  input:checked + .slider {
+    background-color: var(--button-bg);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--button-bg);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(1.5em);
+  }

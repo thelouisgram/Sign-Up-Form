@@ -1,5 +1,4 @@
 const root = document.documentElement;
-const sun = document.querySelector('.sun');
 const mode = document.querySelector('#check')
 
 mode.addEventListener('click', function(){

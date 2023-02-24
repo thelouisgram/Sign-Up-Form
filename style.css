@@ -26,7 +26,8 @@
   --primary-color: white;
   --input-bg: #0e0e0e;
 }
-/* 
+
+
 @media (prefers-color-scheme: dark) {
     
 :root{
@@ -39,10 +40,18 @@
     --input-bg:#0e0e0e;
     
 }
-.mode{
-    display: none;
+
+:root.light{
+  --primary-bg: #f4f6f7;
+  --secondary-bg: white;
+  --button-color: white;
+  --button-bg: #596d48;
+  --input-border: 1px solid #e5e7eb;
+  --primary-color: black;
+  --input-bg:#fff;
 }
-} */
+
+}
 
 body {
   display: grid;

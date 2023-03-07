@@ -28,7 +28,7 @@
         <p>This is not a real online service! You know you need something<br> like this in your life to help you realize your deepest dreams.<br> Sign up <i>now</i> to get started.</p><p>
             You <i>know</i> you want to.</p>
         </div>
-        <form>
+        <form id="form" action="/" method="get">
         <fieldset>
             <legend>Let's do this!</legend>
             <div class="form-box">
@@ -54,17 +54,19 @@
             </div>
             <div>
             <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input id="confirm-passwordr" type="password" method="get" action="#" required>
+            <input id="confirm-password" type="password" method="get" action="#" required>
         </div>
     </div>
         </fieldset>
-        </form>
+        <p class="error"></p>
+        
         <div class="footer">
             <button type="submit" id="btn">Create Account</button>
             <p>Already have an account? <a>Log In</a></p>
 
 
         </div>
+        </form>
     </div>
     <script type="module" defer src="index.js"></script>
 </body>
